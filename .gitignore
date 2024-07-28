@@ -2,5 +2,6 @@
 ._*
 env
 logs
+build
 __pycache__
 *.dist-info

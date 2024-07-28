@@ -3,10 +3,10 @@
 project_name = "Slint Python Template"
 bundle = "tests.somehitdev.slintpython"
 version = "0.0.1"
-url = "https://github.com/somehitDev/slint-python-template"
+url = "{URL}"
 license.file = "LICENSE"
-author = "somehitDev"
-author_email = "this.dev.somehit@gmail.com"
+author = "{Author}"
+author_email = "{AuthorEmail}"
 
 [tool.briefcase.app.slint_python_template]
 formal_name = "Slint Python Template"
