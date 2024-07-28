@@ -7,7 +7,7 @@ from . import __path__
 views_dir = os.path.join(__path__[0], "ui")
 
 def main():
-    ui = slint.load_file(os.path.join(views_dir, "AppWindow.slint"), style = "fluent", include_paths = [ views_dir ])
+    ui = slint.load_file(os.path.join(views_dir, "AppWindow.slint"), include_paths = [ views_dir ])
 
     class App(ui.AppWindow):
         @slint.callback
