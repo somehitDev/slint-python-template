@@ -33,5 +33,5 @@ briefcase package {additional cli arguments}
 <br>
 
 ## 📃 Details/Configurations
-- for detail usage, please check **[slint document](https://releases.slint.dev/latest/docs/slint/)**
+- for detail usage, please check **[slint](https://releases.slint.dev/latest/docs/slint/)** and **[Slint-python](https://pypi.org/project/slint/)**
 - for detail configuration, plase check **[briefcase](https://briefcase.readthedocs.io/)**
