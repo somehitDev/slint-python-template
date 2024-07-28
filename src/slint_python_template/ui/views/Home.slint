@@ -1,0 +1,15 @@
+
+import { AboutSlint } from "std-widgets.slint";
+
+
+export component Home inherits Rectangle {
+    callback initCallback;
+
+    background: @linear-gradient(-20deg, #fff, #888);
+
+    AboutSlint {}
+
+    init => {
+        initCallback();
+    }
+}

@@ -1,0 +1,6 @@
+.vscode
+._*
+env
+logs
+__pycache__
+*.dist-info

@@ -1,0 +1,23 @@
+# This project was generated with 0.3.19 using template: https://github.com/beeware/briefcase-template@v0.3.19
+[tool.briefcase]
+project_name = "Slint Python Template"
+bundle = "tests.somehitdev.slintpython"
+version = "0.0.1"
+url = "https://github.com/somehitDev/slint-python-template"
+license.file = "LICENSE"
+author = "somehitDev"
+author_email = "this.dev.somehit@gmail.com"
+
+[tool.briefcase.app.slint_python_template]
+formal_name = "Slint Python Template"
+description = "Unofficial Template of Slint for Python"
+sources = [
+    "src/slint_python_template",
+]
+test_sources = [
+    "tests",
+]
+
+requires = [
+    "slint==1.7.1a1"
+]

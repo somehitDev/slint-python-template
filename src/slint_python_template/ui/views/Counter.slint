@@ -1,0 +1,41 @@
+
+import { Button } from "std-widgets.slint";
+
+
+export component Counter inherits VerticalLayout {
+    private property<int> count: 0;
+
+    spacing: 5px;
+
+    Text {
+        horizontal-stretch: 1;
+        vertical-stretch: 1;
+        horizontal-alignment: center;
+        vertical-alignment: center;
+
+        text: "\{root.count}";
+    }
+
+    HorizontalLayout {
+        spacing: 5px;
+
+        Button {
+            text: "up";
+            primary: true;
+
+            clicked => {
+                root.count += 1;
+            }
+        }
+
+        Button {
+            text: "down";
+
+            clicked => {
+                if (root.count > 0) {
+                    root.count -= 1;
+                }
+            }
+        }
+    }
+}

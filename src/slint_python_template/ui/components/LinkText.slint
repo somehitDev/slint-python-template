@@ -1,0 +1,17 @@
+
+export component LinkText inherits Text {
+    callback onClick;
+
+    width: 70px;
+    height: 25px;
+    horizontal-alignment: center;
+    vertical-alignment: center;
+
+    TouchArea {
+        mouse-cursor: pointer;
+
+        clicked => {
+            onClick();
+        }
+    }
+}

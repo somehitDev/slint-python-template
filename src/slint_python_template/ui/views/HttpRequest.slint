@@ -1,0 +1,29 @@
+
+import { LineEdit, Button, TextEdit } from "std-widgets.slint";
+
+
+export component HttpRequest inherits VerticalLayout {
+    private property<string> fetchUrl: "https://jsonplaceholder.typicode.com/posts";
+    private property<string> respText;
+
+    callback fetchCallback(string) -> string;
+
+    HorizontalLayout {
+        LineEdit {
+            horizontal-stretch: 1;
+            text: fetchUrl;
+        }
+
+        Button {
+            text: "Fetch";
+            clicked => {
+                root.respText = root.fetchCallback(root.fetchUrl);
+            }
+        }
+    }
+
+    TextEdit {
+        read-only: true;
+        text: respText;
+    }
+}

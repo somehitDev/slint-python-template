@@ -1,0 +1,73 @@
+
+import { Button, TabWidget } from "std-widgets.slint";
+import { LinkText } from "components/LinkText.slint";
+import { Home } from "views/Home.slint";
+import { Counter } from "views/Counter.slint";
+import { HttpRequest } from "views/HttpRequest.slint";
+
+
+export component AppWindow inherits Window {
+    private property<int> tabIndex: 0;
+
+    callback homeInitCallback;
+    callback httpFetchCallback(string) -> string;
+
+    default-font-size: 16px;
+
+    width: 600px;
+    height: 400px;
+    title: "Slint Python Template";
+
+    VerticalLayout {
+        spacing: 5px;
+
+        HorizontalLayout {
+            horizontal-stretch: 1;
+
+            LinkText {
+                text: "Home";
+                onClick => {
+                    root.tabIndex = 0;
+                }
+            }
+
+            LinkText {
+                text: "Counter";
+                onClick => {
+                    root.tabIndex = 1;
+                }
+            }
+
+            LinkText {
+                text: "HttpRequest";
+                width: 100px;
+                onClick => {
+                    root.tabIndex = 2;
+                }
+            }
+        }
+
+        if tabIndex == 0: Home {
+            horizontal-stretch: 1;
+            vertical-stretch: 1;
+
+            initCallback => {
+                homeInitCallback();
+            }
+        }
+
+        if tabIndex == 1: Counter {
+            horizontal-stretch: 1;
+            vertical-stretch: 1;
+        }
+
+        if tabIndex == 2: HttpRequest {
+            horizontal-stretch: 1;
+            vertical-stretch: 1;
+
+            fetchCallback(url) => {
+                return httpFetchCallback(url);
+            }
+        }
+    }
+}
