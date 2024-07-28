@@ -20,6 +20,7 @@ briefcase dev
 ```zsh
 briefcase build {additional cli arguments}
 ```
+<img src="">
 
 - package
 ```zsh
