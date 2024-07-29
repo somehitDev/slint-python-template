@@ -8,14 +8,19 @@ import { HttpRequest } from "views/HttpRequest.slint";
 
 export component AppWindow inherits Window {
     private property<int> tabIndex: 0;
+    in-out property<[int]> size;
+    in-out property<[int]> maxSize;
 
     callback homeInitCallback;
     callback httpFetchCallback(string) -> string;
+    callback drawChartCallback();
 
     default-font-size: 16px;
 
-    width: 600px;
-    height: 400px;
+    min-width: size[0] * 1px;
+    min-height: size[1] * 1px;
+    max-width: maxSize[0] * 1px;
+    max-height: maxSize[1] * 1px;
     title: "Slint Python Template";
 
     VerticalLayout {
@@ -45,6 +50,13 @@ export component AppWindow inherits Window {
                     root.tabIndex = 2;
                 }
             }
+
+            LinkText {
+                text: "Chart";
+                onClick => {
+                    root.tabIndex = 3;
+                }
+            }
         }
 
         if tabIndex == 0: Home {
@@ -67,6 +79,13 @@ export component AppWindow inherits Window {
 
             fetchCallback(url) => {
                 return httpFetchCallback(url);
+            }
+        }
+
+        if tabIndex == 3: Image {
+            init => {
+                root.drawChartCallback();
+                self.source = @image-url("charts/chart.svg");
             }
         }
     }

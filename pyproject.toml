@@ -19,5 +19,7 @@ test_sources = [
 ]
 
 requires = [
-    "slint==1.7.1a1"
+    "slint==1.7.1a1",
+    "pygal==3.0.4",
+    "screeninfo==0.8.1"
 ]
