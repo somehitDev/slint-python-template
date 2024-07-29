@@ -23,6 +23,7 @@ briefcase build {additional cli arguments}
 <img src="https://github.com/somehitDev/slint-python-template/blob/main/assets/SlintPythonTemplate_Home.png?raw=true">
 <img src="https://github.com/somehitDev/slint-python-template/blob/main/assets/SlintPythonTemplate_Counter.png?raw=true">
 <img src="https://github.com/somehitDev/slint-python-template/blob/main/assets/SlintPythonTemplate_HttpRequest.png?raw=true">
+<img src="https://github.com/somehitDev/slint-python-template/blob/main/assets/SlintPythonTemplate_Chart.png?raw=true">
 <br>
 
 - package

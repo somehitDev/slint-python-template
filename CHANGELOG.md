@@ -7,3 +7,4 @@
 - add `pygal` chart.
 - send default size and maximum size from python to slint.
 - fix `requires` section of `pyproject.toml`.
+- fix `README.md`.
